@@ -1,10 +1,3 @@
-resource "aws_key_pair" "key" {
-  key_name   = "key"
-  public_key = file("~/.ssh/id_rsa.pub")
-}
-
-
-
 resource "aws_instance" "web" {
   ami           = "ami-0c2b8ca1dad447f8a"
   instance_type = "t3.micro"
