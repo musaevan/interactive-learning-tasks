@@ -15,7 +15,7 @@ resource "aws_instance" "web" {
   key_name = aws_key_pair.key.key_name
   user_data  =  file("user_data.sh")
   tags = {
-      Name   = "Wordpress"
+      Name   = "Wordpress  ${count.index +1}"
       Team   = "DevOps"
       Environment = "Dev"
   }
